@@ -4,14 +4,119 @@ html {
 body {
     height: 100%;
     background-image: linear-gradient(to bottom right, #000, rgb(124, 120, 120));
+}
+
+/* header */
+.header-wrapper {
+    width: 100%;
+    background-image: linear-gradient(to bottom right, #2F8F9D, #0f4d57);
+    display: flex;
+    justify-content: center;
+}
+.nav-wrapper {
+    max-width: 1130px;
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    font: 14px 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+}
+.list {
+    display: flex;
+    justify-content: space-between;
+}
+.nav-a {
+    font: 12px 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 0 4px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.active-nav {
+    color: #000;
+    font-weight: bold;
+}
+
+/* burger bar */
+.toggleButton {
+    display: none;
+    width: 27px;
+    height: 21px;
+    position: relative;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+.burgerBarStick {
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #FFF;
+    transition: .5s ease-in-out;
+    border-radius: 3px;
+}
+.burgerBarStick2 {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.burgerBarStick3 {
+    bottom: 0%;
+}
+.toggleButton.pressed .burgerBarStick2 {
+    display: none;
+}
+.toggleButton.pressed .burgerBarStick1 {
+    transform: rotate(45deg);
+    transition: .5s;
+}
+.toggleButton.pressed .burgerBarStick3 {
+    top: 0;
+    transform: rotate(-45deg);
+    transition: .5s;
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+    .list {
+        display: none;
+        margin-top: 20px;
+        align-items: flex-end;
+    }
+    .toggleButton {
+        display: block;
+    }
+    .list {
+        flex-direction: column;
+    }
+    .list li {
+        text-align: end;
+    }
+    .list.activeNav {
+        display: block;
+    }
+}
+
+/* accordion */
+.accordion-wrapper {
+    margin-top: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .accordion {
     max-width: 700px;
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     padding: 50px;
     background-image: linear-gradient(to bottom right, #2F8F9D, #0f4d57);

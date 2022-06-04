@@ -26,6 +26,7 @@ body {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 50px #072428;
+    cursor: pointer;
 }
 h2 {
     margin: 20px 0;
@@ -42,6 +43,7 @@ h2 {
 .descrip {
     height: 0;
     overflow: hidden;
+    transition: .3s linear;
 }
 .container.active .descrip {
     height: 100px;
